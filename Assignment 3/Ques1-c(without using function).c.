@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int range, i;
+    int fib1 = 0, fib2 = 1, fib3 = fib1 + fib2;
+
+    printf("Enter the upper limit of the range: ");
+    scanf("%d", &range);
+
+    printf("Non-Fibonacci numbers up to %d are:\n", range);
+
+    for (i = 0; i <= range; i++) {
+        if (i == fib1) {
+            fib1 = fib2;
+            fib2 = fib3;
+            fib3 = fib1 + fib2;
+        } else {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
